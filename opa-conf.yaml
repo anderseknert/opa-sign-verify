@@ -7,8 +7,8 @@ bundles:
     service: nginx
     resource: bundle.tar.gz
     signing:
-      keyid: bundle-verification
+      keyid: verifier
 
 keys:
-  bundle-verification:
+  verifier:
     key: changeme

@@ -36,7 +36,9 @@ mv bundle.tar.gz /opt/homebrew/var/www
 ## Run OPA with bundle verification config
 
 ```shell
-opa run --server --config-file=opa-conf.yaml --set-file="keys.bundle-verification.key=public_key.pem"
+opa run --server \
+        --config-file=opa-conf.yaml \
+        --set-file="keys.verifier.key=public_key.pem"
 ```
 
 Make sure you see "Bundle loaded and activated successfully." in the logs.
