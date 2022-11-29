@@ -45,6 +45,24 @@ mv bundle.tar.gz /opt/homebrew/var/www
 
 ## Run OPA with bundle verification config
 
+**opa-conf.yaml**
+```yaml
+services:
+  nginx:
+    url: http://localhost:8080
+
+bundles:
+  policy:
+    service: nginx
+    resource: bundle.tar.gz
+    signing:
+      keyid: verifier
+
+keys:
+  verifier:
+    key: changeme
+```
+
 We now have a signed bundle served from our bundle server, so let's start the OPA server
 with a config file pointing out its location. Note especially the use of `--set-file` to
 point out the location of our public key. This is preferable over keeping keys embedded in
