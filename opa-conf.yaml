@@ -1,0 +1,14 @@
+services:
+  nginx:
+    url: http://localhost:8080
+
+bundles:
+  policy:
+    service: nginx
+    resource: bundle.tar.gz
+    signing:
+      keyid: bundle-verification
+
+keys:
+  bundle-verification:
+    key: changeme
