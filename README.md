@@ -36,7 +36,7 @@ opa build --bundle --signing-key private_key.pem  --verification-key public_key.
 ## Upload bundle to bundle server
 
 Next, move bundle to bundle server. For the purpose of the example, we'll use an nginx
-server running locally. The bwloe command is on Mac OS with nginx installed via brew —
+server running locally. The below command is on Mac OS with nginx installed via brew —
 the location of the nginx "www" directory may obviously vary.
 
 ```shell
